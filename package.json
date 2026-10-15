@@ -1,0 +1,23 @@
+{
+  "name": "a1c-trece-premium",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "preview:deploy": "wrangler pages deploy dist --project-name a1c-trece-website --branch phase-1-foundation"
+  },
+  "devDependencies": {
+    "@fontsource-variable/dm-sans": "^5.2.8",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.7",
+    "vitest": "^3.2.4",
+    "jsdom": "^26.1.0",
+    "wrangler": "^4.45.0"
+  }
+}
