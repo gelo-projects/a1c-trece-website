@@ -47,6 +47,8 @@ GitHub Actions runs checks only. It has no Cloudflare token and cannot deploy pr
 
 ## Review Phase 1
 
+Open https://phase-1-foundation.a1c-trece-website.pages.dev for the owner review. The fixed deployment URL is https://bef13aa3.a1c-trece-website.pages.dev.
+
 1. Open the preview on a phone and a desktop.
 2. Open Menu, try Light/Dark, Lite Mode and Reduce motion, then reload.
 3. Navigate between sections and use browser Back.

@@ -5,6 +5,11 @@ Account: `6ee7e690ba0dbd142ef7794a624f0907`
 Reserved production branch: `main`  
 Review branch: `phase-1-foundation`
 
+- Owner preview: https://phase-1-foundation.a1c-trece-website.pages.dev
+- Phase 1 deployment: https://bef13aa3.a1c-trece-website.pages.dev
+- Uploaded source commit: `48d87c60f4427d1860b1e64e910bdca8e03b0dfb`
+- Deployment environment: `preview` (16 October 2026)
+
 The project uses Cloudflare Pages Direct Upload. Source and phase history are stored at https://github.com/gelo-projects/a1c-trece-website on `main` and `phase-1-foundation`. GitHub Actions runs checks only. Preview uploads are separate from repository pushes, and no production workflow is present.
 
 ## Build and preview

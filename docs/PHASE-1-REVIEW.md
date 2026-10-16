@@ -1,4 +1,7 @@
-# Phase 1 review — 15 October 2026
+# Phase 1 review — 16 October 2026
+
+- Preview: https://phase-1-foundation.a1c-trece-website.pages.dev
+- Source: https://github.com/gelo-projects/a1c-trece-website/tree/phase-1-foundation
 
 ## Built
 
@@ -16,6 +19,10 @@
 
 - `npm test`: **27 tests** (16 routing, 11 preferences).
 - `npm run build`: strict TypeScript and Vite static build.
+- GitHub Actions passed all 27 tests and the build for uploaded commit `48d87c60f4427d1860b1e64e910bdca8e03b0dfb`.
+- Cloudflare deployment succeeded in the `preview` environment; the preview responds HTTP 200 with the configured search-indexing and security headers.
+- All eight hosted files match the local build byte-for-byte; the Cloudflare project still has no production deployment.
+- Hosted Chromium QA passed at 1440, 390 and 320px: all eight assets loaded, no overflow or browser errors, both dialog focus-wrap directions and Escape worked, dark/Lite/reduced-motion settings survived reload, and six Back traversals restored the correct section position and heading focus.
 - Chromium screenshots: 1440 desktop light/dark, 390 and 320 phone widths; no horizontal overflow, no page JavaScript errors.
 - Official logo loaded at its original 1600px natural width.
 - Menu open, Escape, focus return, forward/reverse focus wrapping, radio keyboard operation.
@@ -34,6 +41,7 @@
 - Reverse Tab from the first modal control could move focus into browser chrome; explicit wrapping now keeps both Tab directions within the open dialog.
 - The earlier image attachments were no longer in temporary storage; the originals were recovered through the owner-supplied Drive folder.
 - The connection could not create a GitHub repository; the owner created it, and the prepared branches and review tag were successfully pushed.
+- Wrangler required an additional login. The connected Cloudflare account's authenticated asset-upload API completed the preview upload without storing credentials.
 
 ## Limits and external dependencies
 
