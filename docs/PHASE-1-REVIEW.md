@@ -10,7 +10,7 @@
 - Native section routes with browser history and heading focus; keyboard-accessible navigation/settings dialogs.
 - Persistent System/Light/Dark theme, Auto/Full/Lite visual preference, system/reduced motion, safe storage failure behavior.
 - Typed branch/course configuration and future scene lifecycle boundary.
-- Local Git main baseline and phase-1-foundation branch, GitHub check workflow structure, source archive.
+- Git main baseline, phase-1-foundation branch and phase-1-review tag pushed to the owner-created `gelo-projects/a1c-trece-website` repository; GitHub check workflow and source archive.
 
 ## Tested and passed
 
@@ -33,12 +33,13 @@
 - Browser native history restoration raced section scroll/focus; the router now uses manual restoration and a cancellable animation frame after history traversal.
 - Reverse Tab from the first modal control could move focus into browser chrome; explicit wrapping now keeps both Tab directions within the open dialog.
 - The earlier image attachments were no longer in temporary storage; the originals were recovered through the owner-supplied Drive folder.
+- The connection could not create a GitHub repository; the owner created it, and the prepared branches and review tag were successfully pushed.
 
 ## Limits and external dependencies
 
 - Tested in emulated Chromium viewports, not on physical Android/iOS devices or Safari. Hardware GPU performance belongs to the 3D/performance phases.
 - Phase 1 intentionally contains no 3D intro, vehicle model, paid API, live schedule/promo/review integration, PWA, analytics, enrollment flow or public launch.
-- GitHub authentication works for existing repositories, but the connection refuses repository creation. No remote repository was created and no unrelated repository was used. Git history and workflow structure are prepared locally; Cloudflare Direct Upload allows preview review independently.
+- The GitHub check workflow does not deploy. Cloudflare Direct Upload is used for the review branch; production remains reserved for Phase 12 approval.
 - Only the supplied regular 8 AM–5 PM schedule is shown; there is no unverified live Open Now claim.
 - Address, phone, Google listing and each vehicle's transmission remain unassigned pending verified data.
 

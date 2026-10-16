@@ -5,7 +5,7 @@ Account: `6ee7e690ba0dbd142ef7794a624f0907`
 Reserved production branch: `main`  
 Review branch: `phase-1-foundation`
 
-The project uses Cloudflare Pages Direct Upload so preview hosting is independent of repository-creation permissions. Source is versioned in Git locally; a GitHub remote may be attached later. GitHub CI can upload the same static artifacts to this Direct Upload project when a scoped token is deliberately configured. No production workflow is present.
+The project uses Cloudflare Pages Direct Upload. Source and phase history are stored at https://github.com/gelo-projects/a1c-trece-website on `main` and `phase-1-foundation`. GitHub Actions runs checks only. Preview uploads are separate from repository pushes, and no production workflow is present.
 
 ## Build and preview
 
@@ -16,7 +16,7 @@ npm run build
 npx wrangler pages deploy dist --project-name a1c-trece-website --branch phase-1-foundation
 ```
 
-The final command requires authorized Cloudflare credentials; it must never default to the production branch. During this task the connected Cloudflare service provides a short-lived asset-upload JWT via hidden stdin to Wrangler, then creates the preview deployment through its authenticated API. Tokens are not stored in this repository, files, logs or command arguments.
+The final command requires authorized Cloudflare credentials; it must never default to the production branch. For this review, the connected Cloudflare service supplies a short-lived asset-upload JWT through hidden stdin to a direct asset uploader; the connected service then creates the preview deployment through its authenticated API. This avoids Wrangler's separate login requirement. Tokens are not stored in this repository, files, logs or command arguments.
 
 ## Approval boundary
 
